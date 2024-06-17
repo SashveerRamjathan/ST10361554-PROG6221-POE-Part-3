@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="600">
+        Title="MainWindow" Height="300" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
+        </Grid.Background>
+
+        <Label Grid.Column="0" Foreground="White" FontSize="22" Margin="0,20,0,0" Width="250" Height="40" VerticalAlignment="Top">Welcome to Grub Mania</Label>
+
         
     </Grid>
 </Window>

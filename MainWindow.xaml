@@ -16,7 +16,8 @@
         </Grid.Background>
 
         <Label Grid.Column="0" Foreground="White" FontSize="22" Margin="0,20,0,0" Width="250" Height="40" VerticalAlignment="Top">Welcome to Grub Mania</Label>
+        <Button x:Name="getStartedBtn" Content="Get Started" HorizontalAlignment="Center" Margin="0,193,0,0" Foreground="White" Click="getStartedBtn_Click" VerticalAlignment="Top" Height="30" Width="84" Background="#FFA49999"/>
 
-        
+
     </Grid>
 </Window>

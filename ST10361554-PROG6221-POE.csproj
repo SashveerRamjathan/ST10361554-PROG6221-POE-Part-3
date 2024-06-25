@@ -55,6 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateMenuWindow.xaml.cs">
+      <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFoodGroupInfoWindow.xaml.cs">
+      <DependentUpon>ViewFoodGroupInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRecipeBookWindow.xaml.cs">
+      <DependentUpon>ViewRecipeBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CreateMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateRecipeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -67,6 +84,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CreateRecipeWindow.xaml.cs">
+      <DependentUpon>CreateRecipeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
@@ -74,6 +94,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ViewFoodGroupInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewRecipeBookWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -103,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\RecipeBackgroud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RecipeAppIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="600" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="300" Width="600" WindowStartupLocation="CenterScreen"
+        Icon="/Images/RecipeAppIcon.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>

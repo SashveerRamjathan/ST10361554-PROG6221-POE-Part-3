@@ -23,5 +23,30 @@ namespace ST10361554_PROG6221_POE.Images
         {
             InitializeComponent();
         }
-    }
+
+		private void CreateRecipeBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void ViewRecipeBookBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void CreateMenuBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void ViewFoodGroupInfoBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void CloseAppBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }

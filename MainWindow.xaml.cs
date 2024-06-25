@@ -40,13 +40,15 @@ namespace ST10361554_PROG6221_POE
 
             //this.Show();
 
+            
+
         }
 
-		private void getStartedBtn_Click(object sender, RoutedEventArgs e)
+		private void GetStartedBtn_Click(object sender, RoutedEventArgs e)
 		{
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
-            this.Close();
+			MenuWindow menuWindow = new MenuWindow();
+			menuWindow.Show();
+			this.Close();
 		}
 	}
 }

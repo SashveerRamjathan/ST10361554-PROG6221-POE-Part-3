@@ -99,6 +99,11 @@ namespace ST10361554_PROG6221_POE
 
 			_recipe.RecipeName = recipeName;
 
+			_recipe.NumberOfSteps++;
+			AddStepWindow window = new AddStepWindow(_recipe, _recipeMethods);
+			window.Show();
+			this.Close();
+
 		}
 
 	}

@@ -126,6 +126,8 @@ namespace ST10361554_PROG6221_POE
 
 		private void BackToCreateRecipeBtn_Click(object sender, RoutedEventArgs e)
 		{
+			--_recipe.NumberOfIngredients;
+
 			CreateRecipeWindow createRecipeWindow = new CreateRecipeWindow(_recipeMethods, _recipe);
 			createRecipeWindow.Show();
 			this.Close();

@@ -6,8 +6,26 @@
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
         Title="CreateRecipeWindow" Height="450" Width="800"
-        Icon="/Images/RecipeAppIcon.ico">
+        Icon="/Images/RecipeAppIcon.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
+        </Grid.Background>
+
+        <Label Content="Create Recipe" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,26,0,0" VerticalAlignment="Top" Width="197" Height="49"/>
+        <Label Content="Recipe Name:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,119,0,0" VerticalAlignment="Top" Height="27" Width="84"/>
+        <TextBox x:Name="RecipeNameTextbox" ToolTip="Enter the recipe name" HorizontalAlignment="Left" Margin="112,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262"/>
+        <Label x:Name="NumIngredientsLbl" Content="Number Of Ingredients:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,153,0,0" VerticalAlignment="Top" Height="27" Width="177"/>
+        <Slider x:Name="NumberIngredientsSlider" TickPlacement="BottomRight" HorizontalAlignment="Left" Margin="32,189,0,0" VerticalAlignment="Top" Minimum="1" Maximum="50" TickFrequency="1" ToolTip="Select the number of ingredients" IsSnapToTickEnabled="True" Width="342" ValueChanged="NumberIngredientsSlider_ValueChanged"/>
+        <Label x:Name="NumStepsLbl" Content="Number Of Steps:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,237,0,0" VerticalAlignment="Top" Height="27" Width="177"/>
+        <Slider x:Name="NumberStepsSlider" TickPlacement="BottomRight" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Minimum="1" Maximum="50" TickFrequency="1" ToolTip="Select the number of steps" IsSnapToTickEnabled="True" Width="342" ValueChanged="NumberStepsSlider_ValueChanged"/>
+        <Button x:Name="CreateRecipeBtn" ToolTip="Start creating recipe" Foreground="White" Content="Create Recipe" HorizontalAlignment="Left" Margin="32,349,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="CreateRecipeBtn_Click"/>
+        <Button x:Name="BackToMenuBtn" Content="Back to Menu" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="272,349,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
+
     </Grid>
 </Window>

@@ -55,15 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddIngredientWindow.xaml.cs">
+      <DependentUpon>AddIngredientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateMenuWindow.xaml.cs">
       <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RecipeStep.cs" />
     <Compile Include="ViewFoodGroupInfoWindow.xaml.cs">
       <DependentUpon>ViewFoodGroupInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewRecipeBookWindow.xaml.cs">
       <DependentUpon>ViewRecipeBookWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddIngredientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateMenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

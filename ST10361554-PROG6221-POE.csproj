@@ -58,6 +58,7 @@
     <Compile Include="AddIngredientWindow.xaml.cs">
       <DependentUpon>AddIngredientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CalorieCounter.cs" />
     <Compile Include="CreateMenuWindow.xaml.cs">
       <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
     </Compile>

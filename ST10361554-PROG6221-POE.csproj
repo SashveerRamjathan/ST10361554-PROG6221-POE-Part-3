@@ -62,6 +62,7 @@
       <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="FoodGroup.cs" />
+    <Compile Include="FoodGroupInformation.cs" />
     <Compile Include="RecipeIngredient.cs" />
     <Compile Include="RecipeStep.cs" />
     <Compile Include="ViewFoodGroupInfoWindow.xaml.cs">

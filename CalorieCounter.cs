@@ -12,7 +12,7 @@ namespace ST10361554_PROG6221_POE
 		public delegate void CalorieEventHandler(string message);
 
 		// This is the calorie event, triggered when total calories exceed 300
-		public event CalorieEventHandler? CaloriesExceed300;
+		public event CalorieEventHandler CaloriesExceed300;
 
 		// Method to add calories to a recipe
 		public void AddCalories(Recipe recipe, RecipeIngredient ingredient, double calories)

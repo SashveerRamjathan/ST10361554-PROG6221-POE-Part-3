@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="AddIngredientWindow" Height="450" Width="800">
+        Title="AddIngredientWindow" Height="480" Width="800"
+        Icon="/Images/RecipeAppIcon.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -16,7 +18,19 @@
         </Grid.Background>
 
         <Label Content="Add Ingredient" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,26,0,0" VerticalAlignment="Top" Width="214" Height="49"/>
-        
-        
+        <Label Content="Ingredient Name:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,119,0,0" VerticalAlignment="Top" Height="27" Width="109"/>
+        <TextBox x:Name="IngredientNameTextbox" ToolTip="Enter ingredient name" HorizontalAlignment="Left" Margin="132,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <Label Content="Ingredient Quantity:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,159,0,0" VerticalAlignment="Top" Height="27" Width="121"/>
+        <TextBox x:Name="IngredientQuantityTextbox" ToolTip="Enter ingredient quantity" HorizontalAlignment="Left" Margin="144,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
+        <Label Content="Unit Of Measurement:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,199,0,0" VerticalAlignment="Top" Height="27" Width="132"/>
+        <ComboBox x:Name="MeasurementComboBox" ToolTip="Choose a unit of measurement" HorizontalAlignment="Left" Margin="29,231,0,0" VerticalAlignment="Top" Width="336"/>
+        <Label Content="Food Group:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,259,0,0" VerticalAlignment="Top" Height="27" Width="132"/>
+        <ComboBox x:Name="FoodGroupComboBox" ToolTip="Choose a food group" HorizontalAlignment="Left" Margin="29,291,0,0" VerticalAlignment="Top" Width="336"/>
+        <Label Content="Calories:" FontSize="12" Foreground="White" HorizontalAlignment="Left" Margin="23,329,0,0" VerticalAlignment="Top" Height="27" Width="55"/>
+        <TextBox x:Name="CaloriesTextbox" ToolTip="Enter calorie count" HorizontalAlignment="Left" Margin="84,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281"/>
+        <Button x:Name="AddIngredientBtn" ToolTip="Save Ingredient" Foreground="White" Content="Add Ingredient" HorizontalAlignment="Left" Margin="32,379,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="AddIngredientBtn_Click"/>
+        <Button x:Name="BackToCreateRecipeBtn" Content="Back" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="272,379,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToCreateRecipeBtn_Click"/>
+
+
     </Grid>
 </Window>

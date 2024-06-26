@@ -20,16 +20,27 @@ namespace ST10361554_PROG6221_POE
 	/// </summary>
 	public partial class CreateRecipeWindow : Window
 	{
-		public CreateRecipeWindow()
+		RecipeMethods _recipeMethods;
+		Recipe _recipe;
+
+		public CreateRecipeWindow(RecipeMethods methods, Recipe recipe)
 		{
 			InitializeComponent();
+			_recipeMethods = methods;
+			_recipe = recipe;
+
+			if (!string.IsNullOrWhiteSpace(recipe.RecipeName))
+			{
+				RecipeNameTextbox.Text = recipe.RecipeName;
+			}
+
+			NumIngredientsLbl.Content = $"Number Of Ingredients: {recipe.NumberOfIngredients}";
+			NumStepsLbl.Content = $"Number Of Steps: {recipe.NumberOfSteps}";
 		}
 
 		private void CreateRecipeBtn_Click(object sender, RoutedEventArgs e)
 		{
 			string recipeName = RecipeNameTextbox.Text;
-			int numSteps = (int)NumberStepsSlider.Value;
-			int numIngredients = (int)NumberIngredientsSlider.Value;
 
 			if (recipeName == "")
 			{
@@ -37,8 +48,17 @@ namespace ST10361554_PROG6221_POE
 				return;
 			}
 
+			_recipe.RecipeName = recipeName;
 
+			_recipeMethods.recipes.Add(_recipe);
 
+			_recipeMethods.DisplayRecipe();
+
+			MessageBox.Show("Recipe saved successfully", "Recipe Saved", MessageBoxButton.OK, MessageBoxImage.Information);
+
+			MenuWindow menuWindow = new MenuWindow();
+			menuWindow.Show();
+			this.Close();
 		}
 
 		private void BackToMenuBtn_Click(object sender, RoutedEventArgs e)
@@ -48,20 +68,38 @@ namespace ST10361554_PROG6221_POE
 			this.Close();
 		}
 
-		private void NumberStepsSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		private void AddIngredientBtn_Click(object sender, RoutedEventArgs e)
 		{
-			if (NumStepsLbl != null)
+			string recipeName = RecipeNameTextbox.Text;
+
+			if (recipeName == "")
 			{
-				NumStepsLbl.Content = $"Number Of Steps: {NumberStepsSlider.Value.ToString()}";
+				MessageBox.Show("Please enter a recipe name.", "Enter a Recipe Name", MessageBoxButton.OK, MessageBoxImage.Warning);
+				return;
 			}
+
+			_recipe.RecipeName = recipeName;
+
+			_recipe.NumberOfIngredients++;
+			AddIngredientWindow window = new AddIngredientWindow(_recipe, _recipeMethods);
+			window.Show();
+			this.Close();
+
 		}
 
-		private void NumberIngredientsSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		private void AddStepBtn_Click(object sender, RoutedEventArgs e)
 		{
-			if (NumIngredientsLbl != null)
+			string recipeName = RecipeNameTextbox.Text;
+
+			if (recipeName == "")
 			{
-				NumIngredientsLbl.Content = $"Number Of Ingredients: {NumberIngredientsSlider.Value.ToString()}";
+				MessageBox.Show("Please enter a recipe name.", "Enter a Recipe Name", MessageBoxButton.OK, MessageBoxImage.Warning);
+				return;
 			}
+
+			_recipe.RecipeName = recipeName;
+
 		}
+
 	}
 }

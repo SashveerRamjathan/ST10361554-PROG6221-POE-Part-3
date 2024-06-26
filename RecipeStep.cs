@@ -8,6 +8,6 @@ namespace ST10361554_PROG6221_POE
 {
 	public class RecipeStep
 	{
-		public string? StepDescription { get; set; } // stores a description of each recipe step
+		public string StepDescription { get; set; } // stores a description of each recipe step
 	}
 }

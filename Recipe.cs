@@ -12,10 +12,10 @@ namespace ST10361554_PROG6221_POE
 		public string RecipeName { get; set; }
 
 		// Property to store the number of ingredients in the recipe
-		public int NumberOfIngredients { get; set; }
+		public int NumberOfIngredients = 0;
 
 		// Property to store the number of steps needed to make the recipe
-		public int NumberOfSteps { get; set; }
+		public int NumberOfSteps = 0;
 
 		// Stack to store a list of factors the recipe was scaled by
 		public Stack<double> FactorsToScale = new Stack<double>();

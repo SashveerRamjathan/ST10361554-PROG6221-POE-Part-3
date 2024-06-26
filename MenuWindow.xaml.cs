@@ -19,14 +19,18 @@ namespace ST10361554_PROG6221_POE.Images
     /// </summary>
     public partial class MenuWindow : Window
     {
+		RecipeMethods _recipeMethods;
+
         public MenuWindow()
         {
             InitializeComponent();
+			_recipeMethods = new RecipeMethods();
         }
 
 		private void CreateRecipeBtn_Click(object sender, RoutedEventArgs e)
 		{
-			CreateRecipeWindow createRecipeWindow = new CreateRecipeWindow();
+			Recipe recipe = new Recipe();
+			CreateRecipeWindow createRecipeWindow = new CreateRecipeWindow(_recipeMethods, recipe);
 			createRecipeWindow.Show();
 			this.Close();
 		}

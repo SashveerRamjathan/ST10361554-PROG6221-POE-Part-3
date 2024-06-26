@@ -58,9 +58,15 @@
     <Compile Include="AddIngredientWindow.xaml.cs">
       <DependentUpon>AddIngredientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddStepWindow.xaml.cs">
+      <DependentUpon>AddStepWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CalorieCounter.cs" />
     <Compile Include="CreateMenuWindow.xaml.cs">
       <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayRecipeWindow.xaml.cs">
+      <DependentUpon>DisplayRecipeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="FoodGroup.cs" />
     <Compile Include="FoodGroupInformation.cs" />
@@ -78,11 +84,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddStepWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateMenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateRecipeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisplayRecipeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

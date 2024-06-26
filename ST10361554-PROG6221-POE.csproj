@@ -66,6 +66,7 @@
     <Compile Include="FoodGroupInformation.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="RecipeIngredient.cs" />
+    <Compile Include="RecipeMethods.cs" />
     <Compile Include="RecipeStep.cs" />
     <Compile Include="ViewFoodGroupInfoWindow.xaml.cs">
       <DependentUpon>ViewFoodGroupInfoWindow.xaml</DependentUpon>

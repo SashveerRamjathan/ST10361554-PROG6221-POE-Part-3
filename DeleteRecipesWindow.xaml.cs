@@ -63,7 +63,7 @@ namespace ST10361554_PROG6221_POE
 			}
 			else
 			{
-				MessageBox.Show("Please select a recipe to add to menu", "Select a Recipe", MessageBoxButton.OK, MessageBoxImage.Warning);
+				MessageBox.Show("Please select a recipe to delete", "Select a Recipe", MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}
 

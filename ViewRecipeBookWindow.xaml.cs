@@ -77,7 +77,7 @@ namespace ST10361554_PROG6221_POE
 			{
 				foreach (Recipe recipe in _recipeMethods.recipes)
 				{
-					RecipeNamesListbox.Items.Add($"{recipeNumber}. {recipe.RecipeName}");
+					RecipeNamesListbox.Items.Add($"{recipeNumber}. {recipe.RecipeName} \nCalories: {recipe.TotalCalories} \nIngredients: {recipe.NumberOfIngredients} \nSteps: {recipe.NumberOfSteps}");
 					++recipeNumber;
 				}
 			}

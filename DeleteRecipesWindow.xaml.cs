@@ -74,6 +74,10 @@ namespace ST10361554_PROG6221_POE
 				_recipeMethods.recipes.Clear();
 				RecipeNamesComboBox.Items.Clear();
 				MessageBox.Show("All recipes have been deleted", "Recipes Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
+
+				MenuWindow menuWindow = new MenuWindow(_recipeMethods);
+				menuWindow.Show();
+				this.Close();
 			}
 		}
 

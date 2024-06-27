@@ -18,7 +18,7 @@
         </Grid.Background>
 
         <Label Content="Recipe Book" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,26,0,0" VerticalAlignment="Top" Width="186" Height="49"/>
-        <ListBox x:Name="RecipeNamesListbox" Margin="31,95,26,181" IsHitTestVisible="False" Focusable="False"/>
+        <ListBox x:Name="RecipeNamesListbox" Margin="31,95,26,181" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
         <Label Content="Select a recipe to view:" Foreground="White" HorizontalAlignment="Left" Margin="31,292,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="RecipeNamesComboBox" HorizontalAlignment="Left" Margin="41,323,0,0" VerticalAlignment="Top" Width="333"/>
         <Button x:Name="ViewRecipeBtn" ToolTip="View a recipes information" Foreground="White" Content="View recipe" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="ViewRecipeBtn_Click"/>

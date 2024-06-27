@@ -79,7 +79,8 @@ namespace ST10361554_PROG6221_POE
 
 		private void ResetScaleBtn_Click(object sender, RoutedEventArgs e)
 		{
-
+			_recipeMethods.RevertScaledQuantities(_recipe);
+			LoadRecipeDetails();
 		}
 
 		private void BackBtn_Click(object sender, RoutedEventArgs e)

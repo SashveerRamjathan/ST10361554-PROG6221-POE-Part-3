@@ -6,8 +6,25 @@
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
         Title="CreateMenuWindow" Height="450" Width="800"
-        Icon="/Images/RecipeAppIcon.ico">
+        Icon="/Images/RecipeAppIcon.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
+        </Grid.Background>
+
+        <Label Content="Create Menu" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,6,0,0" VerticalAlignment="Top" Width="186" Height="49"/>
+        <ListBox x:Name="RecipeNamesListbox" Margin="31,65,26,211" IsHitTestVisible="False" Focusable="False"/>
+        <Label Content="Select a recipe to add to menu:" Foreground="White" HorizontalAlignment="Left" Margin="31,242,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RecipeNamesComboBox" HorizontalAlignment="Left" Margin="31,273,0,0" VerticalAlignment="Top" Width="333"/>
+        <Button x:Name="CreateMenuBtn" ToolTip="Create menu with recipes" Foreground="White" Content="Create Menu" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="CreateMenuBtn_Click"/>
+        <Button x:Name="BackToMenuBtn" Content="Back" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="272,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
+        <Button x:Name="AddToMenuBtn" ToolTip="Add a recipe to the menu" Foreground="White" Content="Add To Menu" HorizontalAlignment="Left" Margin="32,304,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FFA49999" Click="AddToMenuBtn_Click"/>
+
+
     </Grid>
 </Window>

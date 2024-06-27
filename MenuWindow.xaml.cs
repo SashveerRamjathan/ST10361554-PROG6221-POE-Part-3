@@ -44,9 +44,16 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void CreateMenuBtn_Click(object sender, RoutedEventArgs e)
 		{
-			CreateMenuWindow createMenuWindow = new CreateMenuWindow();
-			createMenuWindow.Show();
-			this.Close();
+			if (_recipeMethods.recipes.Count >= 2)
+			{
+				CreateMenuWindow createMenuWindow = new CreateMenuWindow(_recipeMethods);
+				createMenuWindow.Show();
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("You need at least 2 recipes to create a menu, \nAdd 2 recipes and try again", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 
 		private void ViewFoodGroupInfoBtn_Click(object sender, RoutedEventArgs e)

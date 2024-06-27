@@ -21,7 +21,7 @@
         <ListBox x:Name="RecipeNamesListbox" Margin="31,95,26,181" IsHitTestVisible="False" Focusable="False"/>
         <Label Content="Select a recipe to view:" Foreground="White" HorizontalAlignment="Left" Margin="31,292,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="RecipeNamesComboBox" HorizontalAlignment="Left" Margin="41,323,0,0" VerticalAlignment="Top" Width="333"/>
-        <Button x:Name="ViewRecipeBtn" ToolTip="View a recipes innformation" Foreground="White" Content="View recipe" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="ViewRecipeBtn_Click"/>
+        <Button x:Name="ViewRecipeBtn" ToolTip="View a recipes information" Foreground="White" Content="View recipe" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="ViewRecipeBtn_Click"/>
         <Button x:Name="BackToMenuBtn" Content="Back" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="272,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
 
     </Grid>

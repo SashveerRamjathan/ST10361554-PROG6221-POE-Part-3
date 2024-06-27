@@ -37,7 +37,7 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void ViewRecipeBookBtn_Click(object sender, RoutedEventArgs e)
 		{
-			ViewRecipeBookWindow viewRecipeBookWindow = new ViewRecipeBookWindow();
+			ViewRecipeBookWindow viewRecipeBookWindow = new ViewRecipeBookWindow(_recipeMethods);
 			viewRecipeBookWindow.Show();
 			this.Close();
 		}

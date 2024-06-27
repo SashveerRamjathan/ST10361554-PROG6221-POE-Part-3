@@ -52,6 +52,8 @@ namespace ST10361554_PROG6221_POE
 
 			_recipeMethods.recipes.Add(_recipe);
 
+			_recipeMethods.SortRecipes();
+
 			MessageBox.Show("Recipe saved successfully", "Recipe Saved", MessageBoxButton.OK, MessageBoxImage.Information);
 
 			DisplayRecipeWindow displayRecipeWindow = new DisplayRecipeWindow(_recipe, _recipeMethods);

@@ -22,25 +22,9 @@ namespace ST10361554_PROG6221_POE
     /// </summary>
     public partial class MainWindow : Window
     {
-        //// Code Attribution for Timer
-        //private DispatcherTimer _timer;
         public MainWindow()
         {
             InitializeComponent();
-
-            //_timer = new DispatcherTimer();
-            //_timer.Interval = TimeSpan.FromSeconds(3); // 3 seconds
-            //_timer.Tick += (sender, e) => 
-            //{
-            //    MenuWindow menuWindow = new MenuWindow();
-            //    menuWindow.Show();
-            //    this.Close();
-            //};
-            //_timer.Start();
-
-            //this.Show();
-
-            
 
         }
 

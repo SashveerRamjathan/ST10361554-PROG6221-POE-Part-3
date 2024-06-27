@@ -22,6 +22,12 @@ namespace ST10361554_PROG6221_POE
 	/// </summary>
 	public partial class MenuPieChartWindow : Window
 	{
+
+		// taurius litvinavicius (2021).
+		// How To Use Pie Charts with LiveCharts in WPF. [online] YouTube.
+		// Available at: https://youtu.be/KLzkGvOCU30?si=eeroKyIPXD7HVCvX [Accessed 4 Jun. 2024].
+		// (taurius litvinavicius, 2021)
+
 		List<Recipe> _menuRecipes = new List<Recipe>();
 		RecipeMethods _recipeMethods;
 

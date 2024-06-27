@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="DeleteRecipesWindow" Height="450" Width="800"
+        Title="DeleteRecipesWindow" Height="480" Width="800"
         WindowStartupLocation="CenterScreen"
         Icon="/Images/RecipeAppIcon.ico">
     <Grid>
@@ -18,6 +18,11 @@
         </Grid.Background>
 
         <Label Content="Delete Recipes" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="214" Height="49"/>
-        
+        <Button x:Name="DeleteRecipeBtn" ToolTip="Delete a recipe from inventory" Foreground="White" Content="Delete recipe" HorizontalAlignment="Left" Margin="32,378,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="DeleteRecipeBtn_Click"/>
+        <Button x:Name="BackToMenuBtn" Content="Back" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="272,378,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
+        <Label Content="Select a recipe to delete:" Foreground="White" HorizontalAlignment="Left" Margin="31,100,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RecipeNamesComboBox" HorizontalAlignment="Left" Margin="36,131,0,0" VerticalAlignment="Top" Width="333"/>
+        <Button x:Name="ClearAllRecipesBtn" ToolTip="Clear all recipes in inventory" Content="Clear All Recipes" HorizontalAlignment="Left" Foreground="White" Background="#FFA49999" Margin="257,186,0,0" VerticalAlignment="Top" Height="30" Width="112" Click="ClearAllRecipesBtn_Click"/>
+
     </Grid>
 </Window>

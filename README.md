@@ -89,7 +89,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1. Open Visual Studio
 2. Under "Get Started" on the right click clone repository.
-3. In the repository location bar, paste the link you used to open the repository on your browser (https://github.com/SashveerRamjathan/ST10361554-PROG6221-POE-Part2.git).
+3. In the repository location bar, paste the link you used to open the repository on your browser (https://github.com/SashveerRamjathan/ST10361554-PROG6221-POE-Part-3.git).
 4. In the path bar add the file path to the location you want to save the code to.
 5. Click clone in the bottom right corner of the same window.
 

@@ -65,12 +65,19 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void CloseAppBtn_Click(object sender, RoutedEventArgs e)
 		{
-			this.Close();
+			MessageBoxResult result = MessageBox.Show("Are you sure you want to exit the application?", "Exit Application", MessageBoxButton.YesNo, MessageBoxImage.Question);
+			if (result == MessageBoxResult.Yes)
+			{
+				this.Close();
+			}
+
 		}
 
 		private void DeleteRecipesBtn_Click(object sender, RoutedEventArgs e)
 		{
-
+			DeleteRecipesWindow deleteRecipesWindow = new DeleteRecipesWindow(_recipeMethods);
+			deleteRecipesWindow.Show();
+			this.Close();
 		}
 	}
 }

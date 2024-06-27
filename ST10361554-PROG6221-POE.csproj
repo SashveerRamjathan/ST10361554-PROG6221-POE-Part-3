@@ -71,6 +71,9 @@
     <Compile Include="CreateMenuWindow.xaml.cs">
       <DependentUpon>CreateMenuWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeleteRecipesWindow.xaml.cs">
+      <DependentUpon>DeleteRecipesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DisplayRecipeWindow.xaml.cs">
       <DependentUpon>DisplayRecipeWindow.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateRecipeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteRecipesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

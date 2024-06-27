@@ -72,7 +72,6 @@
       <DependentUpon>FactorToScaleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="FoodGroup.cs" />
-    <Compile Include="FoodGroupInformation.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="RecipeDetailsWindow.xaml.cs">
       <DependentUpon>RecipeDetailsWindow.xaml</DependentUpon>

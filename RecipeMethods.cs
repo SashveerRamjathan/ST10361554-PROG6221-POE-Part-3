@@ -13,9 +13,6 @@ namespace ST10361554_PROG6221_POE
 		// List collection to store more than one recipe
 		public List<Recipe> recipes = new List<Recipe>();
 
-		// Instance of FoodGroupInformation to access food group information
-		public FoodGroupInformation FoodGroupInformation = new FoodGroupInformation();
-
 		// Instance of CalorieCounter to perform calorie-related operations
 		public CalorieCounter counter = new CalorieCounter();
 

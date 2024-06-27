@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ST10361554_PROG6221_POE.Images;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,19 @@ namespace ST10361554_PROG6221_POE
 	/// </summary>
 	public partial class ViewFoodGroupInfoWindow : Window
 	{
-		public ViewFoodGroupInfoWindow()
+		RecipeMethods _recipeMethods;
+
+		public ViewFoodGroupInfoWindow(RecipeMethods recipeMethods)
 		{
 			InitializeComponent();
+			_recipeMethods = recipeMethods;
+		}
+
+		private void BackToMenuBtn_Click(object sender, RoutedEventArgs e)
+		{
+			MenuWindow menuWindow = new MenuWindow(_recipeMethods);
+			menuWindow.Show();
+			this.Close();
 		}
 	}
 }

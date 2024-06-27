@@ -6,8 +6,97 @@
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
         Title="ViewFoodGroupInfoWindow" Height="450" Width="800"
-        Icon="/Images/RecipeAppIcon.ico">
+        Icon="/Images/RecipeAppIcon.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <!-- Background Image -->
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+
+                <Label Content="Food Groups" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="188" Height="49"/>
+
+                <!-- Food Group: Fruits -->
+                <Label Foreground="White" Content="Fruits" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Fruits are rich in vitamins, minerals, and fibre, and often have a high water content. They are naturally sweet and can be eaten fresh, dried, or juiced." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Apples, Bananas, Oranges, Berries" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Vegetables -->
+                <Label Foreground="White" Content="Vegetables" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Vegetables are essential sources of vitamins, minerals, and fibre. They are often low in calories and can be consumed raw, cooked, or juiced." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Spinach, Kale, Carrots, Potatoes" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Grains -->
+                <Label Foreground="White" Content="Grains" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Grains are a staple in many diets and provide essential carbohydrates, fibre, and various nutrients. They can be consumed as whole grains or refined products." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Brown Rice, Oat Meal, Flour, Pasta" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Proteins -->
+                <Label Foreground="White" Content="Proteins" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Proteins are crucial for building and repairing tissues. They can be obtained from both animal and plant sources, each providing different nutrients." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Chicken, Beef, Eggs, Lentils, Tofu" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Dairy -->
+                <Label Foreground="White" Content="Dairy" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Dairy products are important for bone health due to their high calcium content. They include milk, cheese, yogurt, and fortified plant milks." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Milk, Cheese, Yogurt, fortified plant milks" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Fats and Oils -->
+                <Label Foreground="White" Content="Fats and Oils" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Fats and oils provide essential fatty acids and are important for various bodily functions. Healthy sources include avocados, olive oil, nuts, and seeds." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Avocados, Olive Oil, Nuts, Seeds (Chia, Flax)" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+
+                <!-- Food Group: Sugars and Sweets -->
+                <Label Foreground="White" Content="Sugars and Sweets" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Expander Foreground="White" Header="Description" IsExpanded="True" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Sugars and sweets are high in calories and should be consumed in moderation. They provide quick energy but often lack nutritional value." 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                <Expander Foreground="White" Header="Examples" IsExpanded="False" Margin="0,10,0,10">
+                    <TextBlock Foreground="White" Text="Candy, Refined Sugar, Cookies" 
+                           TextWrapping="Wrap" Margin="10"/>
+                </Expander>
+                
+                <Button x:Name="BackToMenuBtn" Content="Back to Menu" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" Margin="0,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

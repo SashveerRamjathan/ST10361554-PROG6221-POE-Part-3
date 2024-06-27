@@ -51,7 +51,7 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void ViewFoodGroupInfoBtn_Click(object sender, RoutedEventArgs e)
 		{
-			ViewFoodGroupInfoWindow viewFoodGroupInfoWindow = new ViewFoodGroupInfoWindow();
+			ViewFoodGroupInfoWindow viewFoodGroupInfoWindow = new ViewFoodGroupInfoWindow(_recipeMethods);
 			viewFoodGroupInfoWindow.Show();
 			this.Close();
 		}

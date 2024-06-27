@@ -97,7 +97,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1. Clone the repository following the steps above.
 2. Click the hollow green play button on the navigation bar on the top of your screen or click "Ctrl + F5".
-3. The command window should display after the project builds and you will be able to interact with the program using the windows that appear on screen.
+3. The GUI window should display after the project builds and you will be able to interact with the program using the windows that appear on screen.
 	
 ## Author
 **Name:** [Sashveer Lakhan Ramjathan](https://github.com/SashveerRamjathan)

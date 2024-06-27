@@ -21,10 +21,10 @@ namespace ST10361554_PROG6221_POE.Images
     {
 		RecipeMethods _recipeMethods;
 
-        public MenuWindow()
+        public MenuWindow(RecipeMethods recipeMethods)
         {
             InitializeComponent();
-			_recipeMethods = new RecipeMethods();
+			_recipeMethods = recipeMethods;
         }
 
 		private void CreateRecipeBtn_Click(object sender, RoutedEventArgs e)

@@ -46,7 +46,9 @@ namespace ST10361554_PROG6221_POE
 
 		private void GetStartedBtn_Click(object sender, RoutedEventArgs e)
 		{
-			MenuWindow menuWindow = new MenuWindow();
+            RecipeMethods recipeMethods = new RecipeMethods();
+
+			MenuWindow menuWindow = new MenuWindow(recipeMethods);
 			menuWindow.Show();
 			this.Close();
 		}

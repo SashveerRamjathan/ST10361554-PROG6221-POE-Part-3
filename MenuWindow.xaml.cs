@@ -37,9 +37,16 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void ViewRecipeBookBtn_Click(object sender, RoutedEventArgs e)
 		{
-			ViewRecipeBookWindow viewRecipeBookWindow = new ViewRecipeBookWindow(_recipeMethods);
-			viewRecipeBookWindow.Show();
-			this.Close();
+			if (_recipeMethods.recipes.Count > 0)
+			{
+				ViewRecipeBookWindow viewRecipeBookWindow = new ViewRecipeBookWindow(_recipeMethods);
+				viewRecipeBookWindow.Show();
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("There are no recipes to view, \nAdd a recipe first", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 
 		private void CreateMenuBtn_Click(object sender, RoutedEventArgs e)
@@ -75,9 +82,16 @@ namespace ST10361554_PROG6221_POE.Images
 
 		private void DeleteRecipesBtn_Click(object sender, RoutedEventArgs e)
 		{
-			DeleteRecipesWindow deleteRecipesWindow = new DeleteRecipesWindow(_recipeMethods);
-			deleteRecipesWindow.Show();
-			this.Close();
+			if (_recipeMethods.recipes.Count > 0)
+			{
+				DeleteRecipesWindow deleteRecipesWindow = new DeleteRecipesWindow(_recipeMethods);
+				deleteRecipesWindow.Show();
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("There are no recipes to delete, \nAdd a recipe first", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 	}
 }

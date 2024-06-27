@@ -79,7 +79,7 @@ namespace ST10361554_PROG6221_POE
 
 		private void BackToMenuBtn_Click(object sender, RoutedEventArgs e)
 		{
-			MenuWindow menuWindow = new MenuWindow();
+			MenuWindow menuWindow = new MenuWindow(_recipeMethods);
 			menuWindow.Show();
 			this.Close();
 		}

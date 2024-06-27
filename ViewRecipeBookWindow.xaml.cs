@@ -40,18 +40,35 @@ namespace ST10361554_PROG6221_POE
 
 		private void BackToMenuBtn_Click(object sender, RoutedEventArgs e)
 		{
-			MenuWindow menuWindow = new MenuWindow();
+			MenuWindow menuWindow = new MenuWindow(_recipeMethods);
 			menuWindow.Show();
 			this.Close();
 		}
 
 		private void ViewRecipeBtn_Click(object sender, RoutedEventArgs e)
 		{
+			int recipeIndex = RecipeNamesComboBox.SelectedIndex;
 
+			Recipe selectedRecipe;
+
+			if (recipeIndex >= 0)
+			{
+				selectedRecipe = _recipeMethods.recipes[recipeIndex];
+
+				RecipeDetailsWindow recipeDetailsWindow = new RecipeDetailsWindow(selectedRecipe, _recipeMethods);
+				recipeDetailsWindow.Show();
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("Please select a recipe to view", "Select a Recipe", MessageBoxButton.OK, MessageBoxImage.Warning);
+			}
 		}
 
 		private void LoadListBox()
 		{
+			int recipeNumber = 1;
+
 			if (_recipeMethods.recipes.Count == 0)
 			{
 				RecipeNamesListbox.Items.Add("There are no saved recipes at the moment, \nTry adding one first");
@@ -60,7 +77,8 @@ namespace ST10361554_PROG6221_POE
 			{
 				foreach (Recipe recipe in _recipeMethods.recipes)
 				{
-					RecipeNamesListbox.Items.Add(recipe.RecipeName);
+					RecipeNamesListbox.Items.Add($"{recipeNumber}. {recipe.RecipeName}");
+					++recipeNumber;
 				}
 			}
 		}

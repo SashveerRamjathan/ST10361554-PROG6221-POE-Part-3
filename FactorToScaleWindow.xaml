@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="FactorToScaleWindow" Height="450" Width="800">
+        Title="FactorToScaleWindow" Height="300" Width="600"
+        Icon="/Images/RecipeAppIcon.ico"
+        WindowStartupLocation="CenterOwner">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
+        </Grid.Background>
+
+        <Label Content="Factor To Scale" HorizontalAlignment="Center" Foreground="White" FontSize="20" Margin="0,23,0,0" VerticalAlignment="Top" Width="144" Height="49"/>
+        <Button x:Name="SelectFactorBtn" ToolTip="Scale recipe by the selected factor" Foreground="White" Content="Select Factor" HorizontalAlignment="Left" Margin="18,244,0,0" VerticalAlignment="Top" Height="26" Width="86" Background="#FF34D23D" Click="SelectFactorBtn_Click"/>
+        <Button x:Name="BackToRecipeDetailsBtn" Content="Back" Foreground="White" ToolTip="Back to recipe details" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="191,244,0,0" VerticalAlignment="Top" Height="26" Width="86" Click="BackToRecipeDetailsBtn_Click"/>
+        <Label Content="Select a factor to scale the recipe by:" FontSize="11" Foreground="White" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="FactorsComboBox" HorizontalAlignment="Left" Margin="18,117,0,0" VerticalAlignment="Top" Width="259"/>
+
     </Grid>
 </Window>

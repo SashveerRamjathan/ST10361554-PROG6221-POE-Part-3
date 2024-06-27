@@ -35,14 +35,25 @@ namespace ST10361554_PROG6221_POE
 		{
 			RecipeNamelbl.Content = _recipe.RecipeName;
 
-			IngredientsTextBlock.Text = "";
-			foreach (RecipeIngredient item in _recipe.Ingredients)
+			if (_recipe.Ingredients.Count > 0)
 			{
-				IngredientsTextBlock.Text += $"-> {item.IngredientQuantity} {item.UnitOfMeasurement} of {item.IngredientName} ({item.Group}) (Calories: {item.Calories})\n";
+				IngredientsTextBlock.Text = "";
+				foreach (RecipeIngredient item in _recipe.Ingredients)
+				{
+					IngredientsTextBlock.Text += $"-> {item.IngredientQuantity} {item.UnitOfMeasurement} of {item.IngredientName} ({item.Group}) (Calories: {item.Calories})\n";
+				}
+			}
+			else
+			{
+				IngredientsTextBlock.Text = "";
+				IngredientsTextBlock.Text += "No ingredients have been added to this recipe yet.";
 			}
 
-			StepsItemsControl.ItemsSource = _recipe.Steps;
-
+			if (_recipe.Steps.Count > 0)
+			{
+				StepsItemsControl.ItemsSource = _recipe.Steps;
+			}
+			
 			// Display additional information
 			List<string> calorieInfo = _recipeMethods.counter.CalorieRanges(_recipe);
 			AdditionalInfoTextBlock.Text = "";
@@ -55,7 +66,9 @@ namespace ST10361554_PROG6221_POE
 
 		private void ScaleRecipeBtn_Click(object sender, RoutedEventArgs e)
 		{
-			
+			FactorToScaleWindow factorToScaleWindow = new FactorToScaleWindow(_recipe, _recipeMethods);
+			factorToScaleWindow.Show();
+			this.Close();
 		}
 
 		private void ResetScaleBtn_Click(object sender, RoutedEventArgs e)

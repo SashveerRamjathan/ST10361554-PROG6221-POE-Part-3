@@ -29,6 +29,12 @@ namespace ST10361554_PROG6221_POE
 			_recipe = recipe;
 			_recipeMethods = recipeMethods;
 			LoadRecipeDetails();
+
+			if (_recipe.Ingredients.Count == 0)
+			{
+				ScaleRecipeBtn.IsEnabled = false;
+				ResetScaleBtn.IsEnabled = false;
+			}
 		}
 
 		private void LoadRecipeDetails() 

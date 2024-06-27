@@ -28,6 +28,7 @@ namespace ST10361554_PROG6221_POE
 			_recipe = recipe;
 			_recipeMethods = recipeMethods;
 			LoadComboBox();
+			LoadFactorInfo();
 		}
 
 		private void SelectFactorBtn_Click(object sender, RoutedEventArgs e)
@@ -62,6 +63,14 @@ namespace ST10361554_PROG6221_POE
 			{
 				FactorsComboBox.Items.Add(factor);
 			}
+		}
+
+		private void LoadFactorInfo()
+		{
+			FactorInfoTextBlock.Text = "Factors available to scale recipe by: " +
+				"\n0,5 - Halve the quantity of ingredients and calories " +
+				"\n2 - Double the quantity of ingredients and calories " +
+				"\n3 - Triple the quantity of ingredients and calories";
 		}
 	}
 }

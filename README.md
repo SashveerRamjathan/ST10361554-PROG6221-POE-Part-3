@@ -1,6 +1,6 @@
 # Recipe App
 
-Welcome to the Recipe App repository, a console-based application designed to manage recipes efficiently. This repository hosts the code for my Recipe App, which allows users to create, scale, and manage recipes with ease.
+Welcome to the Recipe App repository, a graphical user interface application designed to manage recipes efficiently. This repository hosts the code for my Recipe App, which allows users to create, scale, and manage recipes with ease.
 
 <div align="center">
 	<img src = "https://st3.depositphotos.com/13324256/17303/i/450/depositphotos_173034766-stock-photo-woman-writing-down-recipe.jpg" width =650 height = 400 />
@@ -49,17 +49,23 @@ With the Recipe App, users can effortlessly create new recipes by adding ingredi
 	#### Display Recipes: 
 	Users can view a list of all saved recipes, including ingredients, steps, and total calories.
 	#### Sort Recipes: 
-	The app provides options to sort recipes alphabetically, enhancing organization and accessibility.
+	The app sorts recipes alphabetically, enhancing organization and accessibility.
+
+	- ### Menu Creation and Food Groups Pie Chart Rendering:
+	#### Menu Creation: 
+	Users can create a menu from a list of all saved recipes.
+	#### Pie Chart Rendering: 
+	Selected Recipes are displayed in a pie chart, providing a visual representation of food groups and nutritional balance.
 
 - ### Interactive Console Interface:
 	#### User-Friendly Interface: 
-	The app features a console-based interface with clear prompts and messages, making it intuitive and easy to navigate.
-	#### Colour-Coded Messages: 
-	System messages are colour-coded for clarity, with green indicating success, red for errors, cyan for special notifications and yellow to display recipes.
+	The app features a graphical user interface with clear prompts and messages, making it intuitive and easy to navigate.
+	#### Confirmation and Information Message Boxes: 
+	User actions are confirmed with message boxes, providing feedback and guidance. Information message boxes display actions the system performed.
 
 - ### Event Handling:
 	#### Calorie Exceeded Alert: 
-	The app triggers a yellow warning message when the total calorie count exceeds 300, helping users monitor nutritional values.
+	The app triggers a message box when the total calorie count exceeds 300, helping users monitor nutritional values.
 
 - ### Data Persistence:
 	#### List Storage: 
@@ -67,34 +73,8 @@ With the Recipe App, users can effortlessly create new recipes by adding ingredi
 
 ## Implementation of Feedback
 
-- #### "Error handling was implemented but could be better"
-	The app now uses more robust and effective error handling in the form of custom exceptions being thrown at certain points if execution fails.
-	Stricter validation was implemented, checks for user inputs, such as ingredient names, quantities, and unit measurements, to prevent erroneous data entry.
-	Try-catch blocks was implemented in critical sections of the code to catch and handle exceptions gracefully, preventing application crashes and providing meaningful feedback to users.
-
-- #### "Required to use advanced features such as colours"
-	The app now makes use of colour-coded system messages which have specific functions e.g. Red to display errors or green to indicate successful operations.
-	Recipes when displayed using the menu option are displayed in yellow to improve the readability against the console background and other text on the screen.
-	Critical alerts, such as exceeding calorie limits, are displayed in yellow, drawing immediate attention to important information.
-	The use of different colours meaningfully serves a specific purpose, creating a visual hierarchy that guides users through different stages of interaction within the app.
-
-- #### "Recipe should be displayed after being scaled" 
-	The app has implemented a feature that displays the recipe immediately after it has been scaled. 
-	This feature provides users with a clear view of the adjusted quantities and allows them to review and verify the changes made.
-	Additionally, the display is colour-coded, with scaled quantities and relevant information highlighted in cyan, making it visually distinct and easy to identify.
-
-- #### "Recipe is not displayed after being scaled recipe not scaled back to original"
-						
-	The app has implemented a stack data structure within each recipe object to store scaling factors.
-	This stack efficiently keeps track of the factors used to scale ingredient quantities, maintaining a record of each modification made to the recipe.
-	The app allows users to revert scaled quantities back to their original values with ease. 
-	By popping factors from the stack in reverse order, the app recalculates ingredient quantities and recalibrates calorie counts, ensuring accuracy and consistency.
-	After scaling, the app displays the recipe, showcasing the modified quantities and total calories. 
-	The app incorporates clear indicators in the recipe display, highlighting whether a recipe has been scaled and displaying the factor it has been scaled by.
-
-- #### "ReadMe needs to include more information on using the app"
-	The updated readMe now includes a short description of the app, a table of contents, a list of features presented in the app and also steps to download and run the apps source code.
-	This provides the user with more than information and background to use the app knowledgably.
+- #### "No Feedback To Implement"
+	Total mark received for the POE part 2 was 100% and no feedback was provided for improvement.
 
 ## How To Compile and Run Software
 

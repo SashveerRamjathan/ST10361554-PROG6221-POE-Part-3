@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RecipeDetailsWindow" Height="500" Width="800"
         Icon="/Images/RecipeAppIcon.ico"
-        WindowStartupLocation="CenterOwner">
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>

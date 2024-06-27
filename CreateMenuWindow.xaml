@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="CreateMenuWindow" Height="450" Width="800"
+        Title="CreateMenuWindow" Height="480" Width="800"
         Icon="/Images/RecipeAppIcon.ico"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -18,7 +18,7 @@
         </Grid.Background>
 
         <Label Content="Create Menu" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,6,0,0" VerticalAlignment="Top" Width="186" Height="49"/>
-        <ListBox x:Name="RecipeNamesListbox" Margin="31,65,26,211" IsHitTestVisible="False" Focusable="False"/>
+        <ListBox x:Name="RecipeNamesListbox" Margin="31,65,26,227" IsHitTestVisible="False" Focusable="False"/>
         <Label Content="Select a recipe to add to menu:" Foreground="White" HorizontalAlignment="Left" Margin="31,242,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="RecipeNamesComboBox" HorizontalAlignment="Left" Margin="31,273,0,0" VerticalAlignment="Top" Width="333"/>
         <Button x:Name="CreateMenuBtn" ToolTip="Create menu with recipes" Foreground="White" Content="Create Menu" HorizontalAlignment="Left" Margin="32,394,0,0" VerticalAlignment="Top" Height="33" Width="92" Background="#FF34D23D" Click="CreateMenuBtn_Click"/>

@@ -67,5 +67,10 @@ namespace ST10361554_PROG6221_POE.Images
 		{
 			this.Close();
 		}
+
+		private void DeleteRecipesBtn_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

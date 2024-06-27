@@ -28,19 +28,28 @@ namespace ST10361554_PROG6221_POE
 			InitializeComponent();
 			_recipeMethods = recipeMethods;
 			LoadComboBox();
+
 		}
 
 		private void AddToMenuBtn_Click(object sender, RoutedEventArgs e)
 		{
-			int recipeIndex = RecipeNamesComboBox.SelectedIndex;
 
-			Recipe selectedRecipe;
+			int recipeIndex = RecipeNamesComboBox.SelectedIndex;
 
 			if (recipeIndex >= 0)
 			{
-				selectedRecipe = _recipeMethods.recipes[recipeIndex];
-				_menuRecipes.Add(selectedRecipe);
-				RecipeNamesListbox.Items.Add($"{selectedRecipe.RecipeName} added to menu");
+				string selectedRecipeName = RecipeNamesComboBox.SelectedItem.ToString();
+
+				foreach (Recipe recipe in _recipeMethods.recipes)
+				{
+					if (recipe.RecipeName == selectedRecipeName)
+					{
+						_menuRecipes.Add(recipe);
+						RecipeNamesListbox.Items.Add($"{recipe.RecipeName} added to menu");
+						RecipeNamesComboBox.Items.Remove(recipe.RecipeName);
+						break;
+					}
+				}
 			}
 			else
 			{
@@ -57,17 +66,12 @@ namespace ST10361554_PROG6221_POE
 
 		private void LoadComboBox()
 		{
-			int recipeNumber = 1;
-
-			if (_menuRecipes.Count == 0)
-			{
-				RecipeNamesListbox.Items.Add("There are recipes added to the menu, \nTry adding one first");
-			}
+			
 
 			foreach (Recipe recipe in _recipeMethods.recipes)
 			{
-				RecipeNamesListbox.Items.Add($"{recipeNumber}. {recipe.RecipeName}");
-				++recipeNumber;
+				RecipeNamesComboBox.Items.Add(recipe.RecipeName);
+				
 			}
 		}
 

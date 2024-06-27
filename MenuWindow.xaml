@@ -18,9 +18,10 @@
         <Label Content="Menu" HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,26,0,0" VerticalAlignment="Top" Width="92" Height="49"/>
         <Button x:Name="CreateRecipeBtn" Content="Create Recipe" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="39,127,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="CreateRecipeBtn_Click"/>
         <Button x:Name="ViewRecipeBookBtn" Content="View Recipe Book" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="245,127,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="ViewRecipeBookBtn_Click"/>
-        <Button x:Name="CreateMenuBtn" Content="Create Menu" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="39,241,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="CreateMenuBtn_Click"/>
-        <Button x:Name="ViewFoodGroupInfoBtn" Content="View Food Groups" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="245,241,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="ViewFoodGroupInfoBtn_Click" />
-        <Button x:Name="CloseAppBtn" Content="Close" Foreground="White" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Height="30" Width="320" Background="#FFE02B2B" Click="CloseAppBtn_Click"/>
+        <Button x:Name="CreateMenuBtn" Content="Create Menu" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="39,211,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="CreateMenuBtn_Click"/>
+        <Button x:Name="ViewFoodGroupInfoBtn" Content="View Food Groups" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="245,211,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="ViewFoodGroupInfoBtn_Click" />
+        <Button x:Name="DeleteRecipesBtn" Content="Delete Recipes" Foreground="White" Background="#FFA49999" HorizontalAlignment="Left" Margin="39,301,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="DeleteRecipesBtn_Click"/>
+        <Button x:Name="CloseAppBtn" Content="Close App" Foreground="White" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="245,301,0,0" VerticalAlignment="Top" Height="46" Width="114" Click="CloseAppBtn_Click" />
 
     </Grid>
 </Window>

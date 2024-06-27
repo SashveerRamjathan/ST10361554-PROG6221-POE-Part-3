@@ -19,7 +19,7 @@ Welcome to the Recipe App repository, a graphical user interface application des
 
 ## Description
 
-The Recipe App is a user-friendly console-based application designed to simplify the process of creating, managing, and scaling recipes. 
+The Recipe App is a user-friendly graphical user interface application designed to simplify the process of creating, managing, and scaling recipes. 
 With the Recipe App, users can effortlessly create new recipes by adding ingredients and steps, scale ingredient quantities based on chosen factors, and view detailed recipe information.
 
 ## Features

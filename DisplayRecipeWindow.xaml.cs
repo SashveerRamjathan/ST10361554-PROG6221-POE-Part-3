@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ST10361554_PROG6221_POE.Images;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -28,34 +29,59 @@ namespace ST10361554_PROG6221_POE
 			InitializeComponent();
 			_recipe = recipe;
 			_recipeMethods = recipeMethods;
+			DisplayRecipe(recipe);
 		}
 
 		public void DisplayRecipe(Recipe recipe)
 		{
-			Console.WriteLine("\n----------------------------------------------------------------------------");
-			Console.WriteLine("Recipe Name: " + recipe.RecipeName);
-			Console.WriteLine("----------------------------------------------------------------------------");
+			RecipeNamelbl.Content = recipe.RecipeName;
 
-			Console.WriteLine("\n\nRecipe Ingredients: " + "\n");
+			RecipeDetailsTextBox.Text += "Recipe Ingredients:\n";
 
-			foreach (RecipeIngredient item in recipe.Ingredients) // for each loop to display the ingredient information for all the ingredients stored in the ingredient array in the recipe object
+			if (recipe.Ingredients.Count == 0)
 			{
-				Console.WriteLine("-> " + item.IngredientQuantity + " " + item.UnitOfMeasurement + " of " + item.IngredientName + $" ({item.Group}) (Calories: {item.Calories})");
+				RecipeDetailsTextBox.Text += "No ingredients have been added to this recipe yet.\n\n";
+			}
+			else
+			{
+				foreach (RecipeIngredient item in recipe.Ingredients)
+				{
+					RecipeDetailsTextBox.Text += $"-> {item.IngredientQuantity} {item.UnitOfMeasurement} of {item.IngredientName} ({item.Group}) (Calories: {item.Calories})\n";
+				}
 			}
 
-			Console.WriteLine("\n\nRecipe Steps: " + "\n");
-
-			for (int j = 0; j < recipe.Steps.Count; j++)  // for loop to display the recipe step information for all the steps stored in the steps array in the recipe object
+			RecipeDetailsTextBox.Text += "\nRecipe Steps:\n";
+			if (recipe.Steps.Count == 0)
 			{
-				Console.WriteLine("Step Number: " + (j+1));
-				Console.WriteLine(recipe.Steps[j].StepDescription + "\n");
+				RecipeDetailsTextBox.Text += "No steps have been added to this recipe yet.\n\n";
+			}
+			else 
+			{
+				for (int j = 0; j < recipe.Steps.Count; j++)
+				{
+					RecipeDetailsTextBox.Text += $"Step Number: {j + 1}\n";
+					RecipeDetailsTextBox.Text += $"{recipe.Steps[j].StepDescription}\n\n";
+				}
 			}
 
-			Console.WriteLine("\nAdditional Information: \n");
-			Console.WriteLine($"The total calories in this recipe is: {recipe.TotalCalories}\n");
-			_recipeMethods.counter.CalorieRanges(recipe);
+			RecipeDetailsTextBox.Text += "Additional Information:\n";
+			RecipeDetailsTextBox.Text += $"The total calories in this recipe is: {recipe.TotalCalories}\n\n";
+
+			List<string> calorieInfo = _recipeMethods.counter.CalorieRanges(recipe);
+			foreach (string item in calorieInfo)
+			{
+				RecipeDetailsTextBox.Text += $"{item}\n";
+			}
+
+
 
 		}
 
+		private void BackToMenuBtn_Click(object sender, RoutedEventArgs e)
+		{
+			MenuWindow menuWindow = new MenuWindow();
+			menuWindow.Show();
+			this.Close();
+		}
 	}
 }

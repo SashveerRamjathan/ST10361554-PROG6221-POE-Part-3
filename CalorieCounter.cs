@@ -37,39 +37,42 @@ namespace ST10361554_PROG6221_POE
 		}
 
 		// Method to categorize the recipe based on its total calorie count and provide relevant information
-		public void CalorieRanges(Recipe recipe)
+		public List<string> CalorieRanges(Recipe recipe)
 		{
 			double calories = recipe.TotalCalories;
+			List<string> calorieInfo = new List<string>();
 
 			// Categorize and describe the recipe based on its total calorie count
 			if (calories < 300 && calories != 0)
 			{
-				Console.WriteLine("Low Calorie Recipe");
-				Console.WriteLine("Typically, these recipes are light meals or snacks. " +
-					"\nThey often include a high proportion of vegetables, lean proteins, and minimal added fats or sugars.");
+				calorieInfo.Add("Low Calorie Recipe");
+				calorieInfo.Add("Typically, these recipes are light meals or snacks. ");
+				calorieInfo.Add("They often include a high proportion of vegetables, lean proteins, and minimal added fats or sugars.");
 			}
 
 			if (calories >= 300 && calories <= 600)
 			{
-				Console.WriteLine("Moderate Calorie Recipe");
-				Console.WriteLine("These recipes can serve as complete meals, often balancing proteins, carbohydrates, and fats. " +
-					"\nThey can be nutritious while still keeping the calorie count in check.");
+				calorieInfo.Add("Moderate Calorie Recipe");
+				calorieInfo.Add("These recipes can serve as complete meals, often balancing proteins, carbohydrates, and fats. ");
+				calorieInfo.Add("They can be nutritious while still keeping the calorie count in check.");
 			}
 
 			if (calories > 600 && calories <= 900)
 			{
-				Console.WriteLine("High Calorie Recipe");
-				Console.WriteLine("These meals are more substantial and may include richer ingredients." +
-					"\nThese can be part of a healthy diet when balanced with lower-calorie meals.");
+				calorieInfo.Add("High Calorie Recipe");
+				calorieInfo.Add("These meals are more substantial and may include richer ingredients.");
+				calorieInfo.Add("These can be part of a healthy diet when balanced with lower-calorie meals.");
 			}
 
 			if (calories > 900)
 			{
-				Console.WriteLine("Very High Calorie Recipes");
-				Console.WriteLine("These recipes are usually indulgent meals or large portions. " +
-					"\nThey often contain high amounts of fats and sugars, making them more calorie-dense. " +
-					"\nThey are typically less balanced and should be eaten in moderation.");
+				calorieInfo.Add("Very High Calorie Recipes");
+				calorieInfo.Add("These recipes are usually indulgent meals or large portions. ");
+				calorieInfo.Add("They often contain high amounts of fats and sugars, making them more calorie-dense. ");
+				calorieInfo.Add("They are typically less balanced and should be eaten in moderation.");
 			}
+
+			return calorieInfo;
 		}
 
 		// Method to raise the CaloriesExceed300 event

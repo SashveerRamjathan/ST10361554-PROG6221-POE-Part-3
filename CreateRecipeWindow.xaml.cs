@@ -52,12 +52,10 @@ namespace ST10361554_PROG6221_POE
 
 			_recipeMethods.recipes.Add(_recipe);
 
-			_recipeMethods.DisplayRecipe();
-
 			MessageBox.Show("Recipe saved successfully", "Recipe Saved", MessageBoxButton.OK, MessageBoxImage.Information);
 
-			MenuWindow menuWindow = new MenuWindow();
-			menuWindow.Show();
+			DisplayRecipeWindow displayRecipeWindow = new DisplayRecipeWindow(_recipe, _recipeMethods);
+			displayRecipeWindow.Show();
 			this.Close();
 		}
 

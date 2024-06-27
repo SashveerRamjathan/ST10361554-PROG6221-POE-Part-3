@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10361554_PROG6221_POE"
         mc:Ignorable="d"
-        Title="DisplayRecipeWindow" Height="450" Width="800"
+        Title="DisplayRecipeWindow" Height="480" Width="800"
         Icon="/Images/RecipeAppIcon.ico"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -17,7 +17,9 @@
             <ImageBrush ImageSource="/Images/RecipeBackgroud.jpg"/>
         </Grid.Background>
         <Label x:Name="RecipeNamelbl" Content="Recipe: " HorizontalAlignment="Center" Foreground="White" FontSize="30" Margin="0,26,0,0" VerticalAlignment="Top" Width="134" Height="49"/>
-        <TextBlock x:Name="RecipeTextblock" Foreground="White" HorizontalAlignment="Center" Margin="0,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="268" Width="319"/>
+        <Button x:Name="BackToMenuBtn" Content="Back to Menu" Foreground="White" ToolTip="Back to main menu" Background="#FFE02B2B" HorizontalAlignment="Left" Margin="18,379,0,0" VerticalAlignment="Top" Height="33" Width="92" Click="BackToMenuBtn_Click"/>
+        <TextBox x:Name="RecipeDetailsTextBox"  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" VerticalAlignment="Center" Width="324" Height="264"/>
+
 
 
     </Grid>

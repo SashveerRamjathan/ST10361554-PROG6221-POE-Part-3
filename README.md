@@ -57,7 +57,7 @@ With the Recipe App, users can effortlessly create new recipes by adding ingredi
 	#### Pie Chart Rendering: 
 	Selected Recipes are displayed in a pie chart, providing a visual representation of food groups and nutritional balance.
 
-- ### Interactive Console Interface:
+- ### Interactive GUI Interface:
 	#### User-Friendly Interface: 
 	The app features a graphical user interface with clear prompts and messages, making it intuitive and easy to navigate.
 	#### Confirmation and Information Message Boxes: 
